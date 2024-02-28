@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            font-family: sans-serif;
+            color: #4caf50;
+            font-weight: bolder;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input::placeholder{
+            color: black;
+        }
+
+        .bttom{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bttom2 {
+            margin-top: 12px;
+            border: 2px solid #4caf50;
+            width: 90px;
+            height: 30px;
+            border-radius: 5px;
+            padding-left:16px;
+            padding-top: 9px;
+            box-shadow: 0.5px 0.5px 1px 1px #4caf50;
+        }
+
+        .bttom2 a{
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: 12px;
+            text-align: center;
+            margin-top: 16px;
+            margin-left: 7px;
+        }
+
+        .bttom button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 12px;
+            box-shadow: 2px 1px 3.5px 3.5px #4caf50;
+        }
+
+        .bttom button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+   
+    
+   
+    <form method = "POST">
+    {% csrf_token %}
+        <h1>Student Information</h1>
+        <br>
+        <label for="name">Student Name</label>
+        <input name="name"  value = "{{obj.name}}"type="text" id="name"  placeholder="Enter Student Name" required>
+
+        <label for="rollNo">Roll Number</label>
+        <input name="roll_no" value = "{{obj.roll_no}}" type="text" id="rollNo" name="roll_no" placeholder="Enter Roll No" required>
+
+        <label for="department">Select Department</label>
+        <select name="department" value = "{{obj.department}}" id="department"  required>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <!-- Add more departments as needed -->
+
+        </select>
+
+        <label for="year">Select Year</label>
+        <select name="year" value = "{{obj.year}}" id="year"  required>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            <option value="Fourth Year">Fourth Year</option>
+            <!-- Add more years as needed -->
+        </select>
+
+       
+
+        <div class="bttom">
+            <div class="bttom1">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="bttom2">
+                <a href = "/info" > Data</a>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
