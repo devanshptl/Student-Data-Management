@@ -27,7 +27,7 @@ During the development of this project, I gained hands-on experience in the foll
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/first-django-project.git
+   https://github.com/devanshptl/django_project_1.git
 
 2. Create a virtual environment (optional but recommended):
 ```bash
