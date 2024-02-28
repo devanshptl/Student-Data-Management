@@ -60,6 +60,11 @@ python manage.py runserver
 
 Feel free to explore the application and test out the CRUD operations.
 
+## Screenshots
+
+![Project Screenshot](https://github.com/devanshptl/django_project_1/blob/%3D/django_project_page_1.png)
+
+![Project Screenshot](https://github.com/devanshptl/django_project_1/blob/%3D/django_project_page_2.png)
 
 
  
